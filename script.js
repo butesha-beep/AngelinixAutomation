@@ -180,6 +180,15 @@ const navMenu = document.querySelector("[data-nav-menu]");
 const languageButtons = document.querySelectorAll("[data-lang]");
 const translatableElements = document.querySelectorAll("[data-i18n]");
 const disabledDemoButtons = document.querySelectorAll("[data-demo-disabled]");
+const telegramLinks = document.querySelectorAll('a[href="https://t.me/AngelinixAI"]');
+const whatsappLinks = document.querySelectorAll('a[href="https://wa.me/380988470126"]');
+const demoTelegramLink = document.querySelector(".demo-active");
+
+function trackEvent(eventName) {
+    if (typeof window.gtag === "function") {
+        window.gtag("event", eventName);
+    }
+}
 
 function setLanguage(language) {
     const dictionary = translations[language] || translations.en;
@@ -202,8 +211,27 @@ function setLanguage(language) {
 languageButtons.forEach((button) => {
     button.addEventListener("click", () => {
         setLanguage(button.dataset.lang);
+        trackEvent(`language_switch_${button.dataset.lang}`);
     });
 });
+
+telegramLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        trackEvent("telegram_click");
+    });
+});
+
+whatsappLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        trackEvent("whatsapp_click");
+    });
+});
+
+if (demoTelegramLink) {
+    demoTelegramLink.addEventListener("click", () => {
+        trackEvent("demo_telegram_click");
+    });
+}
 
 disabledDemoButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
