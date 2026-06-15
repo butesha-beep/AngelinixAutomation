@@ -18,6 +18,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
     color: var(--text);
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
 body.nav-open {
@@ -187,6 +189,10 @@ a {
     align-items: center;
     position: relative;
     z-index: 1;
+}
+
+.hero-copy {
+    min-width: 0;
 }
 
 .eyebrow {
@@ -424,6 +430,26 @@ p {
     font-size: 15px;
 }
 
+.audience-section {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(53, 215, 255, 0.035));
+}
+
+.audience-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.audience-grid .glass-card {
+    min-height: 120px;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    text-align: center;
+}
+
+.audience-grid h3 {
+    margin-bottom: 0;
+}
+
 .system-section {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
 }
@@ -456,6 +482,29 @@ p {
     width: 19px;
     height: 1px;
     background: linear-gradient(90deg, var(--cyan), var(--purple));
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.process-grid .glass-card {
+    min-height: 180px;
+    padding: 24px;
+}
+
+.process-grid span {
+    display: block;
+    margin-bottom: 22px;
+    color: var(--cyan);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.process-grid h3 {
+    margin-bottom: 0;
 }
 
 .analytics-grid .metric-card {
@@ -559,6 +608,8 @@ p {
 
 .price-card {
     min-height: 300px;
+    display: flex;
+    flex-direction: column;
     padding: 30px;
 }
 
@@ -601,6 +652,15 @@ p {
     font-weight: 750;
 }
 
+.price-card > p:not(.price):last-of-type {
+    margin-bottom: 24px;
+}
+
+.price-cta {
+    width: 100%;
+    margin-top: auto;
+}
+
 .pricing-subnote {
     max-width: 620px;
     margin: 10px auto 0;
@@ -634,6 +694,17 @@ p {
 
 .footer strong {
     color: var(--text);
+}
+
+.mobile-sticky-cta {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    z-index: 30;
+    display: none;
+    width: auto;
+    min-height: 50px;
 }
 
 @keyframes heroGradientShift {
@@ -700,6 +771,11 @@ p {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .audience-grid,
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .flow {
         grid-template-columns: 1fr;
     }
@@ -719,6 +795,14 @@ p {
     .setup-grid {
         grid-template-columns: 1fr;
     }
+
+    .mobile-sticky-cta {
+        display: inline-flex;
+    }
+
+    body {
+        padding-bottom: 74px;
+    }
 }
 
 @media (max-width: 620px) {
@@ -737,11 +821,42 @@ p {
     }
 
     .brand {
+        gap: 8px;
         font-size: 14px;
     }
 
+    .brand span[data-i18n="brand"] {
+        display: none;
+    }
+
+    .brand-mark {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .nav-toggle {
+        order: 3;
+        margin-left: 0;
+    }
+
+    .lang-switch {
+        gap: 4px;
+        order: 2;
+        margin-left: 0;
+        padding: 4px;
+    }
+
+    .lang-switch button {
+        padding: 5px 6px;
+    }
+
     h1 {
-        font-size: 46px;
+        font-size: 40px;
     }
 
     .hero-actions,
@@ -754,11 +869,26 @@ p {
         width: 100%;
     }
 
+    .hero-subtitle {
+        max-width: calc(100vw - 28px);
+    }
+
+    .hero-subtitle span {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
     .btn {
         width: 100%;
     }
 
+    .mobile-sticky-cta {
+        width: auto;
+    }
+
     .card-grid,
+    .audience-grid,
+    .process-grid,
     .preview-grid {
         grid-template-columns: 1fr;
     }
