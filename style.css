@@ -474,6 +474,15 @@ p {
     text-align: center;
 }
 
+.flow small {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 1.35;
+}
+
 .flow div:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -856,7 +865,13 @@ p {
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 34px;
+    }
+
+    .hero-subtitle {
+        width: 100%;
+        max-width: min(100%, 340px);
+        font-size: 17px;
     }
 
     .hero-actions,
@@ -869,11 +884,9 @@ p {
         width: 100%;
     }
 
-    .hero-subtitle {
-        max-width: calc(100vw - 28px);
-    }
-
     .hero-subtitle span {
+        display: block;
+        max-width: 100%;
         overflow-wrap: anywhere;
         word-break: break-word;
     }
