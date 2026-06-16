@@ -3,12 +3,12 @@ const translations = {
         brand: "Angelinix Automation",
         navSolution: "Solution",
         navFeatures: "Services",
-        navDemo: "Demo",
+        navDemo: "Showcase",
         navPricing: "Pricing",
         navContact: "Contact",
         getDemo: "Get Free Demo",
         mobileGetDemo: "Get Demo",
-        viewLiveDemo: "View Live Demo",
+        viewLiveDemo: "See Platform",
         heroEyebrow: "Business automation agency",
         heroHeadline: "Business Automation Systems<br>for Growing Teams.",
         heroFreeBanner: "🚀 First Month Free For Early Clients",
@@ -72,11 +72,40 @@ const translations = {
         metricOrders: "Orders Created",
         metricAbandoned: "Lost Leads",
         analyticsNote: "Make decisions based on data, not guesses.",
-        demoEyebrow: "Example Automation Demo",
-        demoHeadline: "See one example of our automation systems",
-        demoText: "This Telegram demo is one sample flow. We also build WhatsApp, Instagram, CRM, dashboard and AI assistant automations around your business.",
-        demoTelegram: "Open Example Demo",
-        demoComingSoon: "Demo coming soon",
+        showcaseEyebrow: "Platform Showcase",
+        showcaseHeadline: "See how the automation platform works",
+        showcaseText: "A real look at the dashboards, workflows, clients, tasks and analytics used to manage business automation systems.",
+        dashboardTag: "Dashboard",
+        operationsDashboard: "Operations Dashboard",
+        operationsText: "Monitor leads, clients, projects, tasks, environments and business activity from one place.",
+        showcasePointOne: "Central view for projects and clients",
+        showcasePointTwo: "Tasks and priorities for daily execution",
+        showcasePointThree: "Automation data ready for reporting",
+        platformWalkthroughCta: "Get Platform Walkthrough",
+        clientsTag: "CRM",
+        projectsTag: "Projects",
+        tasksTag: "Tasks",
+        environmentsTag: "Systems",
+        repositoriesTag: "Sources",
+        analyticsTag: "Insights",
+        exportTag: "Reports",
+        galleryDashboard: "Dashboard",
+        galleryDashboardText: "Central overview of automation activity and daily priorities.",
+        galleryClients: "Clients",
+        galleryClientsText: "Manage contacts, communication details and follow-up context.",
+        galleryProjects: "Projects",
+        galleryProjectsText: "Track automation projects, statuses and business workflows.",
+        galleryTasks: "Tasks",
+        galleryTasksText: "Organize work, deadlines, priorities and execution.",
+        galleryEnvironments: "Environments",
+        galleryEnvironmentsText: "Separate demo, production and development systems.",
+        galleryRepositories: "Repositories",
+        galleryRepositoriesText: "Keep technical assets and project sources organized.",
+        galleryAnalytics: "Analytics",
+        galleryAnalyticsText: "Understand leads, activity, conversions and growth signals.",
+        galleryExport: "Export",
+        galleryExportText: "Download structured business data for backup and reporting.",
+        customDemoCta: "Request Custom Demo",
         setupEyebrow: "Flexible Setup",
         setupHeadline: "Ready-made base. Custom setup when needed.",
         setupText: "We start with an existing automation base and adapt it to your business. Standard features can be configured quickly. Custom workflows, integrations and advanced analytics can be added step by step.",
@@ -120,12 +149,12 @@ const translations = {
         brand: "Angelinix Automation",
         navSolution: "Решение",
         navFeatures: "Услуги",
-        navDemo: "Демо",
+        navDemo: "Обзор",
         navPricing: "Цены",
         navContact: "Контакты",
         getDemo: "Получить демо",
         mobileGetDemo: "Получить демо",
-        viewLiveDemo: "Посмотреть демо",
+        viewLiveDemo: "Посмотреть платформу",
         heroEyebrow: "Агентство бизнес-автоматизации",
         heroHeadline: "Системы бизнес-автоматизации<br>для растущих команд.",
         heroFreeBanner: "🚀 Первый месяц бесплатно для первых клиентов",
@@ -189,11 +218,40 @@ const translations = {
         metricOrders: "Созданные заказы",
         metricAbandoned: "Потерянные лиды",
         analyticsNote: "Принимайте решения на основе данных, а не догадок.",
-        demoEyebrow: "Пример демо автоматизации",
-        demoHeadline: "Посмотрите один пример наших систем автоматизации",
-        demoText: "Это Telegram-демо — один пример сценария. Мы также создаем автоматизации для WhatsApp, Instagram, CRM, панелей управления и AI-ассистентов под ваш бизнес.",
-        demoTelegram: "Открыть пример демо",
-        demoComingSoon: "Демо скоро",
+        showcaseEyebrow: "Обзор платформы",
+        showcaseHeadline: "Посмотрите, как работает платформа автоматизации",
+        showcaseText: "Реальный пример панелей, процессов, клиентов, задач и аналитики, которые помогают управлять автоматизацией бизнеса.",
+        dashboardTag: "Панель",
+        operationsDashboard: "Операционная панель",
+        operationsText: "Контролируйте заявки, клиентов, проекты, задачи, окружения и активность бизнеса в одном месте.",
+        showcasePointOne: "Единый обзор проектов и клиентов",
+        showcasePointTwo: "Задачи и приоритеты для ежедневной работы",
+        showcasePointThree: "Данные автоматизации готовы для отчётов",
+        platformWalkthroughCta: "Получить обзор платформы",
+        clientsTag: "CRM",
+        projectsTag: "Проекты",
+        tasksTag: "Задачи",
+        environmentsTag: "Системы",
+        repositoriesTag: "Источники",
+        analyticsTag: "Инсайты",
+        exportTag: "Отчёты",
+        galleryDashboard: "Dashboard",
+        galleryDashboardText: "Центральный обзор активности автоматизации и ежедневных приоритетов.",
+        galleryClients: "Clients",
+        galleryClientsText: "Управляйте контактами, деталями коммуникации и контекстом follow-up.",
+        galleryProjects: "Projects",
+        galleryProjectsText: "Отслеживайте проекты автоматизации, статусы и бизнес-процессы.",
+        galleryTasks: "Tasks",
+        galleryTasksText: "Организуйте работу, сроки, приоритеты и выполнение.",
+        galleryEnvironments: "Environments",
+        galleryEnvironmentsText: "Разделяйте демо, production и development системы.",
+        galleryRepositories: "Repositories",
+        galleryRepositoriesText: "Храните технические материалы и исходники проектов организованно.",
+        galleryAnalytics: "Analytics",
+        galleryAnalyticsText: "Понимайте лиды, активность, конверсии и сигналы роста.",
+        galleryExport: "Export",
+        galleryExportText: "Выгружайте структурированные бизнес-данные для резервного копирования и отчётности.",
+        customDemoCta: "Запросить индивидуальное демо",
         setupEyebrow: "Гибкая настройка",
         setupHeadline: "Готовая база. Индивидуальная настройка при необходимости.",
         setupText: "Мы начинаем с готовой базы автоматизации и адаптируем ее под ваш бизнес. Стандартные функции можно настроить быстро. Индивидуальные процессы, интеграции и расширенную аналитику можно добавлять постепенно.",
@@ -239,10 +297,10 @@ const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector("[data-nav-menu]");
 const languageButtons = document.querySelectorAll("[data-lang]");
 const translatableElements = document.querySelectorAll("[data-i18n]");
-const disabledDemoButtons = document.querySelectorAll("[data-demo-disabled]");
 const telegramLinks = document.querySelectorAll('a[href="https://t.me/AngelinixAI"]');
 const whatsappLinks = document.querySelectorAll('a[href="https://wa.me/380988470126"]');
-const demoTelegramLink = document.querySelector(".demo-active");
+const platformWalkthroughLinks = document.querySelectorAll("[data-platform-walkthrough]");
+const customDemoLinks = document.querySelectorAll("[data-custom-demo]");
 
 function trackEvent(eventName) {
     if (typeof window.gtag === "function") {
@@ -287,15 +345,15 @@ whatsappLinks.forEach((link) => {
     });
 });
 
-if (demoTelegramLink) {
-    demoTelegramLink.addEventListener("click", () => {
-        trackEvent("demo_telegram_click");
+platformWalkthroughLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        trackEvent("platform_walkthrough_click");
     });
-}
+});
 
-disabledDemoButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-        event.preventDefault();
+customDemoLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        trackEvent("custom_demo_click");
     });
 });
 

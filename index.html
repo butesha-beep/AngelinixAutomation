@@ -33,7 +33,7 @@
             <div class="nav-links" data-nav-menu>
                 <a href="#solution" data-i18n="navSolution">Solution</a>
                 <a href="#features" data-i18n="navFeatures">Features</a>
-                <a href="#demo" data-i18n="navDemo">Demo</a>
+                <a href="#demo" data-i18n="navDemo">Showcase</a>
                 <a href="#pricing" data-i18n="navPricing">Pricing</a>
                 <a href="#contact" data-i18n="navContact">Contact</a>
             </div>
@@ -59,7 +59,7 @@
                     </p>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="https://t.me/AngelinixAI" data-i18n="getDemo">Get Free Demo</a>
-                        <a class="btn btn-secondary" href="https://t.me/AngelinixAI" data-i18n="viewLiveDemo">View Live Demo</a>
+                        <a class="btn btn-secondary" href="https://t.me/AngelinixAI" data-i18n="viewLiveDemo">See Platform</a>
                     </div>
                     <div class="trust-badges" aria-label="Product options">
                         <span data-i18n="badgeReady">Ready-made system available</span>
@@ -191,21 +191,64 @@
             </div>
         </section>
 
-        <section class="section demo-section" id="demo">
-            <div class="container demo-card glass-card">
-                <div>
-                    <p class="eyebrow" data-i18n="demoEyebrow">Example Automation Demo</p>
-                    <h2 data-i18n="demoHeadline">See one example of our automation systems</h2>
-                    <p data-i18n="demoText">This Telegram demo is one sample flow. We also build WhatsApp, Instagram, CRM, dashboard and AI assistant automations around your business.</p>
+        <section class="section showcase-section" id="demo">
+            <div class="container">
+                <div class="section-heading centered">
+                    <p class="eyebrow" data-i18n="showcaseEyebrow">Platform Showcase</p>
+                    <h2 data-i18n="showcaseHeadline">See how the automation platform works</h2>
+                    <p data-i18n="showcaseText">A real look at the dashboards, workflows, clients, tasks and analytics used to manage business automation systems.</p>
                 </div>
-                <div class="demo-actions">
-                    <a class="btn btn-primary demo-active" href="https://t.me/AngelinixAI" data-i18n="demoTelegram">Open Example Demo</a>
-                    <a class="btn btn-secondary demo-disabled" href="#" aria-disabled="true" data-demo-disabled>
-                        <span data-i18n="demoComingSoon">Demo coming soon</span>
-                    </a>
-                    <a class="btn btn-secondary demo-disabled" href="#" aria-disabled="true" data-demo-disabled>
-                        <span data-i18n="demoComingSoon">Demo coming soon</span>
-                    </a>
+
+                <div class="showcase-feature glass-card">
+                    <div class="showcase-visual" aria-label="Operations dashboard mockup">
+                        <div class="panel-top">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="showcase-screen">
+                            <div class="showcase-screen-header">
+                                <span data-i18n="dashboardTag">Dashboard</span>
+                                <strong data-i18n="operationsDashboard">Operations Dashboard</strong>
+                            </div>
+                            <div class="showcase-kpis">
+                                <span>Leads</span>
+                                <span>Clients</span>
+                                <span>Tasks</span>
+                            </div>
+                            <div class="showcase-bars">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-summary">
+                        <h3 data-i18n="operationsDashboard">Operations Dashboard</h3>
+                        <p data-i18n="operationsText">Monitor leads, clients, projects, tasks, environments and business activity from one place.</p>
+                        <ul>
+                            <li data-i18n="showcasePointOne">Central view for projects and clients</li>
+                            <li data-i18n="showcasePointTwo">Tasks and priorities for daily execution</li>
+                            <li data-i18n="showcasePointThree">Automation data ready for reporting</li>
+                        </ul>
+                        <a class="btn btn-primary" href="https://t.me/AngelinixAI" data-platform-walkthrough data-i18n="platformWalkthroughCta">Get Platform Walkthrough</a>
+                    </div>
+                </div>
+
+                <div class="card-grid showcase-grid">
+                    <article class="glass-card showcase-card"><span data-i18n="dashboardTag">Dashboard</span><h3 data-i18n="galleryDashboard">Dashboard</h3><p data-i18n="galleryDashboardText">Central overview of automation activity and daily priorities.</p></article>
+                    <article class="glass-card showcase-card"><span data-i18n="clientsTag">CRM</span><h3 data-i18n="galleryClients">Clients</h3><p data-i18n="galleryClientsText">Manage contacts, communication details and follow-up context.</p></article>
+                    <article class="glass-card showcase-card"><span data-i18n="projectsTag">Projects</span><h3 data-i18n="galleryProjects">Projects</h3><p data-i18n="galleryProjectsText">Track automation projects, statuses and business workflows.</p></article>
+                    <article class="glass-card showcase-card"><span data-i18n="tasksTag">Tasks</span><h3 data-i18n="galleryTasks">Tasks</h3><p data-i18n="galleryTasksText">Organize work, deadlines, priorities and execution.</p></article>
+                    <article class="glass-card showcase-card"><span data-i18n="environmentsTag">Systems</span><h3 data-i18n="galleryEnvironments">Environments</h3><p data-i18n="galleryEnvironmentsText">Separate demo, production and development systems.</p></article>
+                    <article class="glass-card showcase-card"><span data-i18n="repositoriesTag">Sources</span><h3 data-i18n="galleryRepositories">Repositories</h3><p data-i18n="galleryRepositoriesText">Keep technical assets and project sources organized.</p></article>
+                    <article class="glass-card showcase-card"><span data-i18n="analyticsTag">Insights</span><h3 data-i18n="galleryAnalytics">Analytics</h3><p data-i18n="galleryAnalyticsText">Understand leads, activity, conversions and growth signals.</p></article>
+                    <article class="glass-card showcase-card"><span data-i18n="exportTag">Reports</span><h3 data-i18n="galleryExport">Export</h3><p data-i18n="galleryExportText">Download structured business data for backup and reporting.</p></article>
+                </div>
+
+                <div class="showcase-bottom-cta">
+                    <a class="btn btn-secondary" href="https://t.me/AngelinixAI" data-custom-demo data-i18n="customDemoCta">Request Custom Demo</a>
                 </div>
             </div>
         </section>
