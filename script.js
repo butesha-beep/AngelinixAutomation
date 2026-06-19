@@ -117,6 +117,13 @@ const translations = {
         setupScalableText: "New channels and features can be enabled later as your business grows.",
         integrationsEyebrow: "Platforms &amp; Integrations",
         integrationsHeadline: "Connect the tools your business already uses",
+        platformPreviewHeadline: "See the platform behind the automation",
+        platformPreviewText: "Every automation project includes dashboards, client management, project tracking and analytics.",
+        platformPreviewDashboard: "Dashboard",
+        platformPreviewClients: "Clients",
+        platformPreviewProjects: "Projects",
+        platformPreviewAnalytics: "Analytics",
+        platformPreviewClose: "Close preview",
         platformTelegram: "Telegram",
         platformWhatsapp: "WhatsApp",
         platformInstagram: "Instagram",
@@ -263,6 +270,13 @@ const translations = {
         setupScalableText: "Новые каналы и функции можно подключать позже по мере роста бизнеса.",
         integrationsEyebrow: "Платформы и интеграции",
         integrationsHeadline: "Подключаем инструменты, которыми уже пользуется ваш бизнес",
+        platformPreviewHeadline: "Посмотрите платформу за автоматизацией",
+        platformPreviewText: "Каждый проект автоматизации включает панели управления, управление клиентами, отслеживание проектов и аналитику.",
+        platformPreviewDashboard: "Панель",
+        platformPreviewClients: "Клиенты",
+        platformPreviewProjects: "Проекты",
+        platformPreviewAnalytics: "Аналитика",
+        platformPreviewClose: "Закрыть превью",
         platformTelegram: "Telegram",
         platformWhatsapp: "WhatsApp",
         platformInstagram: "Instagram",
@@ -301,6 +315,12 @@ const telegramLinks = document.querySelectorAll('a[href="https://t.me/AngelinixA
 const whatsappLinks = document.querySelectorAll('a[href="https://wa.me/380988470126"]');
 const platformWalkthroughLinks = document.querySelectorAll("[data-platform-walkthrough]");
 const customDemoLinks = document.querySelectorAll("[data-custom-demo]");
+const previewCards = document.querySelectorAll("[data-preview-src]");
+const previewModal = document.querySelector("[data-preview-modal]");
+const previewModalImage = document.querySelector("[data-preview-modal-image]");
+const previewModalTitle = document.querySelector("[data-preview-modal-title]");
+const previewCloseControls = document.querySelectorAll("[data-preview-close]");
+let activePreviewTrigger = null;
 
 function trackEvent(eventName) {
     if (typeof window.gtag === "function") {
@@ -324,6 +344,60 @@ function setLanguage(language) {
     });
 
     document.documentElement.lang = language;
+
+    if (previewModal && !previewModal.hidden && activePreviewTrigger && previewModalImage && previewModalTitle) {
+        const title = getPreviewTitle(activePreviewTrigger);
+
+        previewModalTitle.textContent = title;
+        previewModalImage.alt = title;
+    }
+}
+
+function getPreviewTitle(trigger) {
+    const title = trigger.querySelector(".platform-preview-card-title");
+
+    return title ? title.textContent.trim() : "";
+}
+
+function openPreviewModal(trigger) {
+    if (!previewModal || !previewModalImage || !previewModalTitle) {
+        return;
+    }
+
+    const title = getPreviewTitle(trigger);
+
+    activePreviewTrigger = trigger;
+    previewModalImage.src = trigger.dataset.previewSrc;
+    previewModalImage.alt = title;
+    previewModalTitle.textContent = title;
+    previewModal.hidden = false;
+    document.body.classList.add("preview-modal-open");
+
+    const closeButton = previewModal.querySelector(".platform-preview-close");
+
+    if (closeButton) {
+        closeButton.focus();
+    }
+}
+
+function closePreviewModal() {
+    if (!previewModal || previewModal.hidden) {
+        return;
+    }
+
+    previewModal.hidden = true;
+    document.body.classList.remove("preview-modal-open");
+
+    if (previewModalImage) {
+        previewModalImage.removeAttribute("src");
+        previewModalImage.alt = "";
+    }
+
+    if (activePreviewTrigger) {
+        activePreviewTrigger.focus();
+    }
+
+    activePreviewTrigger = null;
 }
 
 languageButtons.forEach((button) => {
@@ -355,6 +429,22 @@ customDemoLinks.forEach((link) => {
     link.addEventListener("click", () => {
         trackEvent("custom_demo_click");
     });
+});
+
+previewCards.forEach((card) => {
+    card.addEventListener("click", () => {
+        openPreviewModal(card);
+    });
+});
+
+previewCloseControls.forEach((control) => {
+    control.addEventListener("click", closePreviewModal);
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closePreviewModal();
+    }
 });
 
 if (navToggle && navMenu) {
