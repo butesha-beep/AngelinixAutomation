@@ -120,6 +120,7 @@ const translations = {
         platformPreviewBadge: "LIVE PLATFORM PREVIEW",
         platformPreviewHeadline: "See the platform behind the automation",
         platformPreviewText: "Every automation project includes dashboards, client management, project tracking and analytics.",
+        platformPreviewProof: "Real Angelinix Master interface, not a mockup. These dashboards are used to manage clients, projects, automation workflows and analytics.",
         platformPreviewDashboard: "Dashboard",
         platformPreviewDashboardText: "Track projects, revenue and team activity.",
         platformPreviewClients: "Clients",
@@ -153,8 +154,9 @@ const translations = {
         proText: "Full business automation system with custom workflows, dashboards and priority support.",
         proCta: "Book Discovery Call",
         pricingNote: "Every package starts with a short consultation.",
-        pricingSubnote: "We recommend the right setup after understanding your channels, workflow and goals.",
-        finalHeadline: "We build automation systems for businesses.",
+        pricingSubnote: "We start from a ready-made automation base, then adapt channels, workflows and dashboards after a short consultation.",
+        finalHeadline: "Ready to see how this could work for your business?",
+        finalText: "Book a free demo and we’ll map your automation flow.",
         footerText: "Business automation, done right."
     },
     ru: {
@@ -278,6 +280,7 @@ const translations = {
         platformPreviewBadge: "ЖИВОЙ ПРЕВЬЮ ИНТЕРФЕЙСА",
         platformPreviewHeadline: "Посмотрите платформу за автоматизацией",
         platformPreviewText: "Каждый проект автоматизации включает панели управления, управление клиентами, отслеживание проектов и аналитику.",
+        platformPreviewProof: "Реальный интерфейс Angelinix Master, не макет. Эти панели используются для управления клиентами, проектами, автоматизациями и аналитикой.",
         platformPreviewDashboard: "Dashboard",
         platformPreviewDashboardText: "Отслеживайте проекты, доход и активность команды.",
         platformPreviewClients: "Clients",
@@ -311,8 +314,9 @@ const translations = {
         proText: "Полная система бизнес-автоматизации с индивидуальными процессами, панелями и приоритетной поддержкой.",
         proCta: "Забронировать созвон",
         pricingNote: "Каждый пакет начинается с короткой консультации.",
-        pricingSubnote: "Мы рекомендуем подходящую настройку после изучения каналов, процессов и целей.",
-        finalHeadline: "Мы создаем системы автоматизации для бизнеса.",
+        pricingSubnote: "Мы начинаем с готовой базы автоматизации, а затем адаптируем каналы, процессы и панели после короткой консультации.",
+        finalHeadline: "Хотите увидеть, как это может работать для вашего бизнеса?",
+        finalText: "Запишитесь на бесплатное демо, и мы разберем вашу схему автоматизации.",
         footerText: "Бизнес-автоматизация, сделанная правильно."
     }
 };
