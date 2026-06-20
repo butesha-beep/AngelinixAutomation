@@ -1,4 +1,4 @@
-const DEMO_BOT_URL = "https://t.me/YOUR_DEMO_BOT_USERNAME";
+const DEMO_BOT_URL = "https://t.me/AngelinixDemoBot";
 const TELEGRAM_CONTACT_URL = "https://t.me/AngelinixAI";
 const WHATSAPP_CONTACT_URL = "https://wa.me/380988470126";
 
