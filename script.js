@@ -1,3 +1,7 @@
+const DEMO_BOT_URL = "https://t.me/YOUR_DEMO_BOT_USERNAME";
+const TELEGRAM_CONTACT_URL = "https://t.me/AngelinixAI";
+const WHATSAPP_CONTACT_URL = "https://wa.me/380988470126";
+
 const translations = {
     en: {
         brand: "Angelinix Automation",
@@ -48,6 +52,44 @@ const translations = {
         audienceFood: "Food businesses",
         audienceRepair: "Repair / installation teams",
         audienceCoaches: "Coaches / consultants",
+        outcomesEyebrow: "Before → After",
+        outcomesHeadline: "What Changes After Automation",
+        outcomeBefore: "Before",
+        outcomeAfter: "After",
+        outcomeRestaurantsTitle: "Restaurants / Pizzerias",
+        outcomeRestaurantsBeforeOne: "Orders scattered across chats",
+        outcomeRestaurantsBeforeTwo: "No customer history",
+        outcomeRestaurantsBeforeThree: "Manual promotions",
+        outcomeRestaurantsBeforeFour: "No sales analytics",
+        outcomeRestaurantsAfterOne: "Telegram ordering flow",
+        outcomeRestaurantsAfterTwo: "Customer CRM",
+        outcomeRestaurantsAfterThree: "Automated promotions",
+        outcomeRestaurantsAfterFour: "Sales dashboard",
+        outcomeStoresTitle: "Online Stores",
+        outcomeStoresBeforeOne: "Manual order processing",
+        outcomeStoresBeforeTwo: "Lost leads",
+        outcomeStoresBeforeThree: "No customer tracking",
+        outcomeStoresBeforeFour: "No repeat sales strategy",
+        outcomeStoresAfterOne: "Automated catalog",
+        outcomeStoresAfterTwo: "Customer database",
+        outcomeStoresAfterThree: "Order automation",
+        outcomeStoresAfterFour: "Repeat sales campaigns",
+        outcomeServicesTitle: "Service Businesses",
+        outcomeServicesBeforeOne: "Leads lost in messages",
+        outcomeServicesBeforeTwo: "No follow-up process",
+        outcomeServicesBeforeThree: "No pipeline visibility",
+        outcomeServicesAfterOne: "Lead intake automation",
+        outcomeServicesAfterTwo: "CRM pipeline",
+        outcomeServicesAfterThree: "Follow-up reminders",
+        outcomeServicesAfterFour: "Reporting dashboard",
+        outcomeOperationsTitle: "Warehouses / Operations Teams",
+        outcomeOperationsBeforeOne: "Manual coordination",
+        outcomeOperationsBeforeTwo: "No centralized visibility",
+        outcomeOperationsBeforeThree: "No operational reporting",
+        outcomeOperationsAfterOne: "Process dashboards",
+        outcomeOperationsAfterTwo: "Team workflows",
+        outcomeOperationsAfterThree: "Status tracking",
+        outcomeOperationsAfterFour: "Operational analytics",
         systemEyebrow: "Business Automation System",
         systemHeadline: "From first lead to repeat sales",
         flowLeads: "Traffic &amp; Leads",
@@ -208,6 +250,44 @@ const translations = {
         audienceFood: "Еда и доставка",
         audienceRepair: "Ремонт / монтажные команды",
         audienceCoaches: "Коучи / консультанты",
+        outcomesEyebrow: "До → После",
+        outcomesHeadline: "Что меняется после автоматизации",
+        outcomeBefore: "До",
+        outcomeAfter: "После",
+        outcomeRestaurantsTitle: "Рестораны и пиццерии",
+        outcomeRestaurantsBeforeOne: "Заказы разбросаны по чатам",
+        outcomeRestaurantsBeforeTwo: "Нет истории клиентов",
+        outcomeRestaurantsBeforeThree: "Акции делаются вручную",
+        outcomeRestaurantsBeforeFour: "Нет аналитики продаж",
+        outcomeRestaurantsAfterOne: "Telegram-сценарий заказов",
+        outcomeRestaurantsAfterTwo: "CRM клиентов",
+        outcomeRestaurantsAfterThree: "Автоматические акции",
+        outcomeRestaurantsAfterFour: "Панель продаж",
+        outcomeStoresTitle: "Онлайн-магазины",
+        outcomeStoresBeforeOne: "Ручная обработка заказов",
+        outcomeStoresBeforeTwo: "Потерянные заявки",
+        outcomeStoresBeforeThree: "Нет отслеживания клиентов",
+        outcomeStoresBeforeFour: "Нет стратегии повторных продаж",
+        outcomeStoresAfterOne: "Автоматизированный каталог",
+        outcomeStoresAfterTwo: "Клиентская база",
+        outcomeStoresAfterThree: "Автоматизация заказов",
+        outcomeStoresAfterFour: "Кампании повторных продаж",
+        outcomeServicesTitle: "Сервисные бизнесы",
+        outcomeServicesBeforeOne: "Заявки теряются в сообщениях",
+        outcomeServicesBeforeTwo: "Нет follow-up процесса",
+        outcomeServicesBeforeThree: "Не видно этапы работы",
+        outcomeServicesAfterOne: "Автоматический прием заявок",
+        outcomeServicesAfterTwo: "CRM-воронка",
+        outcomeServicesAfterThree: "Напоминания follow-up",
+        outcomeServicesAfterFour: "Панель отчетности",
+        outcomeOperationsTitle: "Склады и операционные команды",
+        outcomeOperationsBeforeOne: "Ручная координация",
+        outcomeOperationsBeforeTwo: "Нет единого обзора",
+        outcomeOperationsBeforeThree: "Нет операционной отчетности",
+        outcomeOperationsAfterOne: "Панели процессов",
+        outcomeOperationsAfterTwo: "Командные workflows",
+        outcomeOperationsAfterThree: "Отслеживание статусов",
+        outcomeOperationsAfterFour: "Операционная аналитика",
         systemEyebrow: "Система бизнес-автоматизации",
         systemHeadline: "От первого лида до повторных продаж",
         flowLeads: "Трафик и лиды",
@@ -325,8 +405,9 @@ const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector("[data-nav-menu]");
 const languageButtons = document.querySelectorAll("[data-lang]");
 const translatableElements = document.querySelectorAll("[data-i18n]");
-const telegramLinks = document.querySelectorAll('a[href="https://t.me/AngelinixAI"]');
-const whatsappLinks = document.querySelectorAll('a[href="https://wa.me/380988470126"]');
+const demoBotLinks = document.querySelectorAll("[data-demo-bot-link]");
+const telegramLinks = document.querySelectorAll("[data-telegram-contact-link]");
+const whatsappLinks = document.querySelectorAll("[data-whatsapp-contact-link]");
 const platformWalkthroughLinks = document.querySelectorAll("[data-platform-walkthrough]");
 const customDemoLinks = document.querySelectorAll("[data-custom-demo]");
 const previewCards = document.querySelectorAll("[data-preview-src]");
@@ -335,6 +416,18 @@ const previewModalImage = document.querySelector("[data-preview-modal-image]");
 const previewModalTitle = document.querySelector("[data-preview-modal-title]");
 const previewCloseControls = document.querySelectorAll("[data-preview-close]");
 let activePreviewTrigger = null;
+
+demoBotLinks.forEach((link) => {
+    link.href = DEMO_BOT_URL;
+});
+
+telegramLinks.forEach((link) => {
+    link.href = TELEGRAM_CONTACT_URL;
+});
+
+whatsappLinks.forEach((link) => {
+    link.href = WHATSAPP_CONTACT_URL;
+});
 
 function trackEvent(eventName) {
     if (typeof window.gtag === "function") {
